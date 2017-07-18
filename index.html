@@ -46,9 +46,20 @@ var customInfo = ["Tiene 100 objetos en el carrito.","Fecha de log: 2017/07/17 1
     };
 })(window, document, "/static.olark.com/jsclient/loader.js");
 /* custom configuration goes here (www.olark.com/documentation) */
+var extraData = [];
+extraData.push("Sign up date: " + '2017-07-17');
+extraData.push("Total orders placed: " + '23');
+olark('api.chat.updateVisitorNickname', {
+    snippet: 'mmadrigalva'
+})
+//Setting email address
+olark('api.visitor.updateEmailAddress', {
+    emailAddress: 'teenmv92@gmail.com'
+});
+//Setting extra information
 olark('api.chat.updateVisitorStatus', {
-        snippet: customInfo
-    });
+    snippet: extraData
+});
 olark.identify('9207-338-10-6924');
 </script>
 <!-- end olark code -->
