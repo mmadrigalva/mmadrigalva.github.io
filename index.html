@@ -1,76 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  
-<script src="https://instantcm.com/js/v2/latest/txt-min.js"></script>
-<script>
-  $.get("https://api.instantcm.com/api/v1/geo-ip", function(response) {    console.log(response);});
-  var options = {
-  id: "473fa0e6-df62-47db-a98f-382820f16061"
-  };
-  Txt.render(options);
-</script>
-<title>Page Title</title>
+<title>Page Title</title>  
+<meta property="og:url" content="http://wwww.aluminyze.com" />
+<meta property="og:image" content="//cdn.aluminyze.com/content/images/facebook/share_image.jpg" />
 </head>
-<body>
-
-<h1>Orlak Chat!</h1>
-<p>Chat with us!</p>
-
-<!-- begin olark code -->
-<script type="text/javascript" async> 
-var customInfo = ["Tiene 100 objetos en el carrito.","Fecha de log: 2017/07/17 10:40 a.m"]
-;
-(function(o, l, a, r, k, y) {
-    if (o.olark) return;
-    r = "script";
-    y = l.createElement(r);
-    r = l.getElementsByTagName(r)[0];
-    y.async = 1;
-    y.src = "//" + a;
-    r.parentNode.insertBefore(y, r);
-    y = o.olark = function() {
-        k.s.push(arguments);
-        k.t.push(+new Date)
-    };
-    y.extend = function(i, j) {
-        y("extend", i, j)
-    };
-    y.identify = function(i) {
-        y("identify", k.i = i)
-    };
-    y.configure = function(i, j) {
-        y("configure", i, j);
-        k.c[i] = j
-    };
-    k = y._ = {
-        s: [],
-        t: [+new Date],
-        c: {},
-        l: a
-    };
-})(window, document, "/static.olark.com/jsclient/loader.js");
-/* custom configuration goes here (www.olark.com/documentation) */
-var extraData = [];
-extraData.push("Sign up date: " + '2017-07-17');
-extraData.push("Total orders placed: " + '23');
-olark('api.chat.updateVisitorNickname', {
-    snippet: 'mmadrigalva'
-})
-//Setting email address
-olark('api.visitor.updateEmailAddress', {
-    emailAddress: 'teenmv92@gmail.com'
-});
-//Setting extra information
-olark('api.chat.updateVisitorStatus', {
-    snippet: extraData
-});
-olark.identify('9207-338-10-6924');
-</script>
-<!-- end olark code -->
+<body onload="redirect()">
+<h1>Testing facebook publish</h1>
+  <script>
+    function redirect() {
+      window.location.href = 'www.aluminyze.com';
+    }
+  </script>
 </body>
 </html>
